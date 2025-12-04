@@ -35,23 +35,6 @@ function initMap() {
 // 테스트 버튼 추가 (임시로 넣자)
 document.body.insertAdjacentHTML('beforeend', '<button onclick="testOpenAI()">OpenAI 연결 테스트</button>');
 
-async function testOpenAI() {
-    const apiKey = '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';  // 네 sk-... 키 넣기
-    alert('테스트 시작! Console(F12) 봐줘');
-    
-    try {
-        const res = await fetch('https://api.openai.com/v1/models', {
-            headers: { 'Authorization': 'Bearer ' + apiKey }
-        });
-        const data = await res.json();
-        console.log('성공!', data);
-        alert('연결 성공!! 이제 진짜 일정도 나올 거야!!');
-    } catch (e) {
-        console.log('실패:', e);
-        alert('연결 실패... 안티바이러스 꺼봐!');
-    }
-}
-
 async function generateItinerary(lat, lng) {
     document.getElementById('itinerary').innerText = 'AI가 일정을 짜는 중...';
     
@@ -81,5 +64,6 @@ async function generateItinerary(lat, lng) {
         document.getElementById('itinerary').innerText = '오류 발생: ' + error.message + ' (API 키 확인하세요)';
     }
 }
+
 
 
