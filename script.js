@@ -36,7 +36,7 @@ function initMap() {
 document.body.insertAdjacentHTML('beforeend', '<button onclick="testOpenAI()">OpenAI 연결 테스트</button>');
 
 async function testOpenAI() {
-    const apiKey = '여기에_네_OpenAI_키_붙여넣기';  // 네 sk-... 키 넣기
+    const apiKey = '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';  // 네 sk-... 키 넣기
     alert('테스트 시작! Console(F12) 봐줘');
     
     try {
@@ -81,4 +81,5 @@ async function generateItinerary(lat, lng) {
         document.getElementById('itinerary').innerText = '오류 발생: ' + error.message + ' (API 키 확인하세요)';
     }
 }
+
 
