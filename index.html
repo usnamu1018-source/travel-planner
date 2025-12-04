@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행 계획 AI</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #map { height: 400px; width: 100%; border: 1px solid #ccc; }
+        #selected-location { margin-top: 20px; font-weight: bold; }
+        #itinerary { margin-top: 20px; padding: 10px; border: 1px solid #ddd; background-color: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <h1>여행 계획 AI</h1>
+    <p>지도를 클릭해서 장소를 선택하세요. AI가 자동으로 일정을 짜줄 거예요!</p>
+    
+    <div id="map"></div>
+    
+    <div id="selected-location">선택된 장소: 없음</div>
+    
+    <div id="itinerary">AI 생성 일정: 여기에 표시될 거예요.</div>
+
+    <!-- Google Maps API 스크립트 (API 키 교체) -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM8M9u0lVKvPv3Xe5QOCCXxqGkVL5yXpM&callback=initMap"></script>
+    
+    <!-- 우리의 JavaScript 파일 -->
+    <script src="script.js"></script>
+</body>
+</html>
